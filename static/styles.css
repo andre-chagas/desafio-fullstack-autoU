@@ -30,17 +30,23 @@ body[data-theme="light"] {
 }
 
 .app-header {
-  padding: 1.5rem 1.5rem 1rem;
+  padding: 1.25rem 1.5rem 1rem;
   color: #e5e7eb;
+  position: relative;
 }
 
 body[data-theme="light"] .app-header {
   color: #020617;
 }
 
-.brand {
+.app-header-inner {
   max-width: 1120px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -391,7 +397,9 @@ body[data-theme="light"] .app-footer {
 }
 
 .theme-toggle {
-  margin-left: auto;
+  position: absolute;
+  top: 0.95rem;
+  right: 1.5rem;
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.8);
@@ -427,6 +435,11 @@ body[data-theme="light"] .theme-toggle {
 @media (max-width: 640px) {
   .app-header {
     padding-inline: 1rem;
+  }
+
+  .theme-toggle {
+    right: 1rem;
+    top: 0.9rem;
   }
 
   .app-main {
