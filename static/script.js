@@ -128,3 +128,34 @@ copyButton.addEventListener("click", async () => {
   }
 });
 
+const themeToggleButton = document.getElementById("theme-toggle-button");
+
+if (themeToggleButton) {
+  const body = document.body;
+  const storedTheme =
+    typeof window !== "undefined" && window.localStorage
+      ? localStorage.getItem("theme")
+      : null;
+  const initialTheme =
+    storedTheme === "light" || storedTheme === "dark"
+      ? storedTheme
+      : body.getAttribute("data-theme") || "dark";
+
+  function applyTheme(theme) {
+    body.setAttribute("data-theme", theme);
+    if (typeof window !== "undefined" && window.localStorage) {
+      localStorage.setItem("theme", theme);
+    }
+    themeToggleButton.textContent =
+      theme === "light" ? "Tema escuro" : "Tema claro";
+  }
+
+  applyTheme(initialTheme);
+
+  themeToggleButton.addEventListener("click", () => {
+    const current =
+      body.getAttribute("data-theme") === "light" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    applyTheme(next);
+  });
+}
