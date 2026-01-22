@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificador de Emails - AutoU</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark">AU</div>
+        <div class="brand-text">
+          <h1>Classificador Inteligente de Emails</h1>
+          <p>Automatize a triagem e resposta de mensagens da sua operação.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="panel panel-input">
+        <h2>Envie um email para análise</h2>
+        <p class="panel-subtitle">
+          Faça upload de um arquivo .txt ou .pdf ou cole o conteúdo do email no campo abaixo.
+        </p>
+
+        <form id="email-form">
+          <div class="field-group">
+            <label for="email-file">Upload de arquivo (.txt, .pdf)</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="email-file" name="email_file" accept=".txt,.pdf">
+            </div>
+            <p class="field-hint">
+              Arquivos de até 5 MB. Caso prefira, use apenas o campo de texto.
+            </p>
+          </div>
+
+          <div class="separator">
+            <span>ou</span>
+          </div>
+
+          <div class="field-group">
+            <label for="email-text">Texto do email</label>
+            <textarea
+              id="email-text"
+              name="email_text"
+              rows="10"
+              placeholder="Cole aqui o conteúdo do email que deseja classificar..."
+            ></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" id="submit-button">
+              <span class="spinner" id="submit-spinner" aria-hidden="true"></span>
+              <span id="submit-label">Analisar email</span>
+            </button>
+          </div>
+
+          <p class="disclaimer">
+            Nenhum dado é armazenado. O conteúdo é usado apenas para esta análise.
+          </p>
+
+          <div class="feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section class="panel panel-output">
+        <h2>Resultado da análise</h2>
+
+        <div class="result-row">
+          <div class="result-label">Categoria</div>
+          <div class="result-value">
+            <span id="result-category" class="badge badge-muted">Aguardando análise</span>
+          </div>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">Confiança da classificação</div>
+          <div class="result-value">
+            <span id="result-confidence">-</span>
+          </div>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">Origem da classificação</div>
+          <div class="result-value">
+            <span id="result-source">-</span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="result-response">Resposta sugerida</label>
+          <textarea
+            id="result-response"
+            rows="10"
+            readonly
+            placeholder="A resposta sugerida aparecerá aqui após a análise."
+          ></textarea>
+          <div class="actions actions-inline">
+            <button type="button" id="copy-response-button">Copiar resposta</button>
+            <span id="copy-feedback" class="copy-feedback" aria-live="polite"></span>
+          </div>
+          <p class="field-hint">
+            Personalize livremente a resposta antes de enviar ao cliente.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Desenvolvido por André Chagas | IA-Mail © 2025 |
+        <a href="https://github.com/andre-chagas/desafio-fullstack-autoU" target="_blank" rel="noopener noreferrer">
+          GitHub - Repositório
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "Produtivo": [
+    "Olá, gostaria de saber o status do meu chamado 123 sobre falha no internet banking.",
+    "Bom dia, estou com um problema para acessar a minha conta pelo aplicativo. Podem me ajudar?",
+    "Preciso de uma atualização sobre o andamento do pedido de aumento de limite do meu cartão.",
+    "Poderiam verificar o motivo da cobrança em duplicidade na minha fatura deste mês?",
+    "Gostaria de solicitar o cancelamento do cartão final 1234 o mais rápido possível.",
+    "Envio em anexo os comprovantes de pagamento para análise do setor responsável.",
+    "Tenho uma dúvida sobre a taxa de juros aplicada ao meu financiamento.",
+    "O boleto do meu empréstimo não foi gerado. Podem reenviar o documento?",
+    "Recebi uma mensagem informando bloqueio de segurança e preciso regularizar meu acesso.",
+    "Solicito reabertura do chamado encerrado sem solução referente ao estorno não realizado."
+  ],
+  "Improdutivo": [
+    "Feliz Natal a toda a equipe, desejo muita paz e prosperidade neste fim de ano.",
+    "Agradeço imensamente o atendimento prestado ontem, foi tudo perfeito.",
+    "Gostaria apenas de parabenizar pelo novo aplicativo, ficou muito bonito e fácil de usar.",
+    "Boa tarde, passando somente para agradecer pelo suporte que recebi recentemente.",
+    "Desejo a todos um excelente fim de semana, grande abraço.",
+    "Parabéns pelo atendimento, continuem com esse ótimo trabalho!",
+    "Muito obrigado pela atenção de sempre, não preciso de retorno.",
+    "Obrigado pelo esclarecimento, era só isso mesmo.",
+    "Bom dia, apenas para registrar minha satisfação com o serviço.",
+    "Feliz ano novo a todos, muito sucesso e realizações!"
+  ]
+}
+
